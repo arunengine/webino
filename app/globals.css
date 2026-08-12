@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+  }
+  
+  body {
+    @apply bg-dark text-zinc-100 font-sans antialiased selection:bg-accent selection:text-white overflow-x-hidden;
+  }
+}
+
+/* Background Grid Pattern */
+.bg-grid-pattern {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+/* Noise overlay effect */
+.bg-noise {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+}
+
+/* Glowing blur utility */
+.glow-effect {
+  position: relative;
+}
+.glow-effect::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  background: linear-gradient(90deg, rgba(99, 102, 241, 0.4), rgba(168, 85, 247, 0.4), rgba(6, 182, 212, 0.4));
+  border-radius: inherit;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  filter: blur(12px);
+}
+.glow-effect:hover::before {
+  opacity: 0.8;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #09090b;
+}
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}

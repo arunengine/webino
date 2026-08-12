@@ -1,0 +1,8 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" fill="#180E29"/>
+  <circle cx="600" cy="400" r="160" fill="#A855F7" opacity="0.3"/>
+  <circle cx="600" cy="400" r="100" fill="#6366F1" opacity="0.5"/>
+  <circle cx="600" cy="400" r="40" fill="#FFFFFF"/>
+  <text x="600" y="220" font-family="Outfit, sans-serif" font-size="36" font-weight="bold" fill="#FFFFFF" text-anchor="middle">PULSE</text>
+  <text x="600" y="265" font-family="Inter, sans-serif" font-size="16" fill="#D8B4FE" text-anchor="middle">MOBILE PRODUCT EXPERIENCE</text>
+</svg>
